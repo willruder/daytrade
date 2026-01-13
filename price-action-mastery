@@ -1,0 +1,18 @@
+price-action-mastery/
+│
+├── index.html
+├── lessons.html
+├── lesson-flags.html
+├── lesson-breakouts.html
+├── lesson-support-resistance.html
+│
+├── assets/
+│   │
+│   ├── css/
+│   │   └── style.css
+│   │
+│   ├── js/
+│   │   └── main.js
+│   │
+│   └── images/
+│       └── charts.svg
