@@ -92,3 +92,29 @@ function calculateRisk() {
 Shares: ${positionSize}
 Risk Per Share: $${riskPerShare.toFixed(2)}`;
 }
+/* ===========================
+   PROGRESS TRACKING
+   =========================== */
+
+function markComplete(lesson) {
+    localStorage.setItem(`lesson_${lesson}`, "completed");
+
+    const msg = document.getElementById("completionMessage");
+    if (msg) {
+        msg.innerText = "Lesson marked as complete ✔";
+    }
+}
+
+function checkProgress() {
+    const completed = Object.keys(localStorage)
+        .filter(key => key.startsWith("lesson_"));
+
+    console.log("Completed lessons:", completed);
+}
+
+checkProgress();
+<p>
+    Educational content only. This course does not provide financial,
+    investment, or trading advice. Trading involves substantial risk
+    and may result in losses exceeding deposits.
+</p>
