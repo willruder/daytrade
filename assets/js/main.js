@@ -51,3 +51,20 @@ function highlightActiveNav() {
    - Risk calculators
    - Progress tracking
 */
+/* ===========================
+   COURSE MODULE TOGGLES
+   =========================== */
+
+document.querySelectorAll(".lesson-toggle").forEach(button => {
+    button.addEventListener("click", () => {
+        const content = button.nextElementSibling;
+        const isOpen = content.style.display === "block";
+
+        document.querySelectorAll(".lesson-content").forEach(c => {
+            c.style.display = "none";
+        });
+
+        content.style.display = isOpen ? "none" : "block";
+    });
+});
+
