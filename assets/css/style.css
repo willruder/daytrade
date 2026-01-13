@@ -23,6 +23,71 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* ===========================
+   CALCULATOR
+   =========================== */
+
+.calculator {
+    max-width: 500px;
+    margin: 2rem auto 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.calc-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.calc-field label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.calc-field input {
+    padding: 0.6rem;
+    border-radius: var(--radius);
+    border: 1px solid #d1d5db;
+}
+
+.calc-button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    font-weight: 700;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.calc-button:hover {
+    background-color: #16a34a;
+}
+
+.calc-result {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+/* ===========================
+   CHECKLIST
+   =========================== */
+
+.checklist {
+    max-width: var(--max-width);
+    margin: 2rem auto 0 auto;
+    list-style: square;
+}
+
+.checklist li {
+    margin-bottom: 0.6rem;
+    color: var(--text-light);
+}
+
 
 html {
     scroll-behavior: smooth;
