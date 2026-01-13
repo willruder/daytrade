@@ -67,4 +67,28 @@ document.querySelectorAll(".lesson-toggle").forEach(button => {
         content.style.display = isOpen ? "none" : "block";
     });
 });
+/* ===========================
+   RISK CALCULATOR
+   =========================== */
 
+function calculateRisk() {
+    const account = parseFloat(document.getElementById("accountSize").value);
+    const riskPercent = parseFloat(document.getElementById("riskPercent").value);
+    const entry = parseFloat(document.getElementById("entryPrice").value);
+    const stop = parseFloat(document.getElementById("stopPrice").value);
+
+    if (!account || !riskPercent || !entry || !stop) {
+        document.getElementById("calcResult").innerText =
+            "Please fill in all fields correctly.";
+        return;
+    }
+
+    const riskAmount = account * (riskPercent / 100);
+    const riskPerShare = Math.abs(entry - stop);
+    const positionSize = Math.floor(riskAmount / riskPerShare);
+
+    document.getElementById("calcResult").innerText =
+        `Risk Amount: $${riskAmount.toFixed(2)}
+Shares: ${positionSize}
+Risk Per Share: $${riskPerShare.toFixed(2)}`;
+}
