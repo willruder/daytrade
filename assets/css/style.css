@@ -257,3 +257,44 @@ li {
         display: none;
     }
 }
+/* ===========================
+   COURSE MODULES
+   =========================== */
+
+.lesson {
+    margin-top: 1.5rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.lesson-toggle {
+    width: 100%;
+    text-align: left;
+    padding: 1.2rem 1.5rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.lesson-toggle:hover {
+    background-color: #1873cc;
+}
+
+.lesson-content {
+    display: none;
+    padding: 1.5rem;
+    background-color: white;
+}
+
+.lesson-content p {
+    color: var(--text-dark);
+}
+
+.lesson-content ul {
+    margin-top: 0.8rem;
+}
