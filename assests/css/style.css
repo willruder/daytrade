@@ -105,3 +105,53 @@ body {
   padding: 40px;
   color: var(--text-muted);
 }
+.lesson-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.lesson-card {
+  background: #020617;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #1f2933;
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.lesson-card:hover {
+  border-color: var(--accent);
+}
+
+.lesson-intro {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 800px;
+}
+
+.lesson-image img {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px 0;
+  border-radius: 10px;
+  border: 1px solid #1f2933;
+}
+
+.callout {
+  background: #020617;
+  padding: 20px;
+  border-left: 4px solid var(--accent);
+  margin: 20px 0;
+}
+
+.callout.warning {
+  border-left-color: #facc15;
+}
+
+.pro-tip {
+  background: #022c22;
+  padding: 20px;
+  border-left: 4px solid #22c55e;
+  margin: 30px 0;
+}
