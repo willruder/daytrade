@@ -1,0 +1,286 @@
+/* =========================
+   DESIGN VARIABLES
+========================= */
+:root {
+  --bg-dark: #0b0e11;
+  --bg-light: #111827;
+  --bg-card: #020617;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+  --accent: #22c55e;
+  --warning: #facc15;
+  --danger: #ef4444;
+}
+
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+.nav {
+  background: #020617;
+  border-bottom: 1px solid #1f2933;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: var(--text-main);
+}
+
+/* =========================
+   BREADCRUMBS
+========================= */
+.breadcrumbs {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 20px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.breadcrumbs a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  color: var(--text-muted);
+  max-width: 500px;
+}
+
+.hero-image img {
+  border-radius: 12px;
+  border: 1px solid #1f2933;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-primary {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 14px 28px;
+  background: var(--accent);
+  color: #000;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.section.dark {
+  background: var(--bg-light);
+}
+
+.section h1,
+.section h2 {
+  margin-bottom: 20px;
+}
+
+/* =========================
+   GRID LAYOUTS
+========================= */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* =========================
+   CARDS
+========================= */
+.card {
+  background: var(--bg-card);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #1f2933;
+}
+
+/* =========================
+   LESSON LIST
+========================= */
+.lesson-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.lesson-card {
+  background: var(--bg-card);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #1f2933;
+  text-decoration: none;
+  color: var(--text-main);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.lesson-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+/* =========================
+   LESSON CONTENT
+========================= */
+.lesson-intro {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 800px;
+}
+
+.lesson-image img {
+  max-width: 900px;
+  margin: 40px 0;
+  border-radius: 10px;
+  border: 1px solid #1f2933;
+}
+
+/* =========================
+   CALLOUTS
+========================= */
+.callout {
+  background: var(--bg-card);
+  padding: 20px;
+  border-left: 4px solid var(--accent);
+  margin: 20px 0;
+}
+
+.callout.warning {
+  border-left-color: var(--warning);
+}
+
+.pro-tip {
+  background: #022c22;
+  padding: 20px;
+  border-left: 4px solid var(--accent);
+  margin: 30px 0;
+}
+
+.common-mistake {
+  background: #2a0e0e;
+  border-left: 4px solid var(--danger);
+  padding: 18px;
+  margin: 30px 0;
+  color: #fecaca;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-muted);
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    gap: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .btn-primary {
+    padding: 12px 20px;
+  }
+}
